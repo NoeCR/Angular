@@ -1,0 +1,9 @@
+ul {
+    min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+}
+li {
+    display: inline;
+    padding-left: 10px;
+}
