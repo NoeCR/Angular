@@ -1,0 +1,31 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+
+<button type="button" (click)="alerta = 'alert-info'" class="btn btn-info">Info</button>
+<button type="button" (click)="alerta = 'alert-success'" class="btn btn-success">Success</button>
+<button type="button" (click)="alerta = 'alert-warning'" class="btn btn-warning">Warning</button>
+
+
+<h3 [ngClass]="{ 'text-danger': propiedades.danger, 'text-info': !propiedades.danger }">
+  Hola Mundo
+</h3>
+<button type="button" (click)="propiedades.danger = !propiedades.danger" class="btn"
+  [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}">Cambia</button>
+
+<br><br>
+<br><br>
+<br><br>
+<button class="btn btn-primary" type="button" name="button" (click)="ejecutar()" [disabled]="loading">
+  <i class="fa " [ngClass]="{'fa-save': !loading, 'fa-sync fa-spin': loading}"></i>
+  <span *ngIf="!loading">Guardar cambios</span>
+  <span *ngIf="loading">Espere por favor</span>
+</button>
+<hr>
+<!-- Button calculate -->
+<button class="btn btn-primary" type="button" name="button" (click)="calcular()" [disabled]="calculate">
+
+  <span *ngIf="!calculate">12.002 €</span>
+  <span *ngIf="calculate">Calculando <span id="waiting"></span></span>
+</button>
