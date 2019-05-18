@@ -1,0 +1,29 @@
+.header-app{
+    text-align: center;
+}
+.buttons-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-send{
+    padding: 1rem;
+    margin: 1rem;
+    width: 30%;
+}
+li{
+    text-decoration: underline;
+    padding: 0.3rem;
+    list-style: none;
+}
+.order-form{
+    width: 200px;
+    margin: 0px auto;
+
+    .btn-send{
+        height: 20px;
+        line-height: 3px;
+        font-weight: bold;
+    }
+}
