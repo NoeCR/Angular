@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDboCr-DFVBG9fNuY8R9-vsZPW_3htZ86I",
-    authDomain: "eatery-3ec9f.firebaseapp.com",
-    databaseURL: "https://eatery-3ec9f.firebaseio.com",
-    projectId: "eatery-3ec9f",
-    storageBucket: "eatery-3ec9f.appspot.com",
-    messagingSenderId: "345084854634",
-    appId: "1:345084854634:web:811f2a8b25e240d3"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
   }
 };
 
