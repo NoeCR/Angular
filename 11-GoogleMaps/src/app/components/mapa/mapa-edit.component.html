@@ -1,0 +1,25 @@
+<form [formGroup]="forma">
+    <div mat-dialog-content class="row">
+        <p>Define nombre y descripción del marcador</p>
+        <mat-form-field class="col example-full-width">
+            <input matInput 
+                    placeholder="Titulo"
+                    formControlName="title">
+        </mat-form-field>
+        <mat-form-field class="col example-full-width">
+            <textarea matInput 
+                        placeholder="Titulo"
+                        formControlName="description"></textarea>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <div>
+            <button mat-raised-button color="primary"
+                    (click)="guardarCambios()">Editar</button>
+            <button mat-raised-button 
+                    color="warn"
+                    (click)="onNoClick()"
+                    type="button">Cancelar</button>
+        </div>
+    </div>
+</form>

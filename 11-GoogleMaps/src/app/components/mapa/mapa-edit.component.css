@@ -1,0 +1,8 @@
+.row:before, .row:after{
+    display: table;
+    content: " ";
+    clear:both
+}
+.col{
+    width: 100%;
+}
