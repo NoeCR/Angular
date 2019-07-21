@@ -1,0 +1,38 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+// Componentes
+import { FotosComponent } from './components/fotos/fotos.component';
+import { CargaComponent } from './components/carga/carga.component';
+// Servicios
+import { CargaImagenesService } from './services/carga-imagenes.service';
+// Firebase Modules
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+// Configuración de entorno
+import { environment } from '../environments/environment';
+// Directivas
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
+@NgModule({
+  declarations: [
+    AppComponent,
+    FotosComponent,
+    CargaComponent,
+    NgDropFilesDirective
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
+  ],
+  providers: [ CargaImagenesService ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
