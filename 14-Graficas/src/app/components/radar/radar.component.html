@@ -1,0 +1,13 @@
+<div>
+    <div>
+        <div style="display: block">
+        <canvas baseChart
+            [datasets]="radarChartData"
+            [options]="radarChartOptions"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType">
+        </canvas>
+        </div>
+    </div>
+    <button class="btn btn-outline-primary btn-block" (click)="random()">Actualizar</button>
+</div>
