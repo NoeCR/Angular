@@ -1,0 +1,84 @@
+<div class="limiter animated fadeInRight">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-50 p-b-90">
+                <form class="login100-form validate-form flex-sb flex-w"
+                        [formGroup]="registerForm"
+                        (ngSubmit)="onSubmit()">
+    
+                    <span class="login100-form-title p-b-51">
+                        Crear nueva cuenta
+                    </span>
+    
+                    <!-- <span class="text-danger">El correo es obligatorio</span> -->
+                    <div class="wrap-input100 m-b-16"
+                         [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+                        <input class="input100"
+                               formControlName="email" 
+                               type="email" 
+                               placeholder="Email">
+    
+                        <span class="focus-input100"></span>
+                        <div *ngIf="isSubmitted && formControls.email.errors" class="help-block">
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.email.errors.required">Email is required</div>
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.email.status !== 'VALID'">Email is not valid</div>
+                        </div>
+                    </div>
+
+                    <!-- <span class="text-danger">El nombre es obligatorio</span> -->
+                    <div class="wrap-input100 m-b-16"
+                         [ngClass]="{ 'has-error': isSubmitted && formControls.name.errors }">
+                        <input class="input100" 
+                               formControlName="name"
+                               type="text" 
+                               placeholder="Nombre y apellidos">
+    
+                        <span class="focus-input100"></span>
+                        <div *ngIf="isSubmitted && formControls.name.errors" class="help-block">
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.name.errors.required">Name is required</div>
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.name.errors.minlength">The name must have at least 2 characters</div>
+                        </div>
+                    </div>
+                    
+                    <!-- <span class="text-danger">La contraseña debe de ser más de 6 letras</span> -->
+                    <div class="wrap-input100 m-b-16"
+                         [ngClass]="{ 'has-error': isSubmitted && formControls.password.errors }"
+                         data-validate = "Password is required">
+                        <input class="input100"
+                               formControlName="password"
+                               type="password" 
+                               placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <div *ngIf="isSubmitted && formControls.password.errors" class="help-block">
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.password.errors.required">Password is required</div>
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.password.errors.pattern">Password incorrect must contain only valid characters</div>
+                            <div class="text-danger animated fadeIn" *ngIf="formControls.password.errors.minlength">The name must have at least 6 characters</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex-sb-m w-full p-t-3 p-b-24">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Recordar mi usuario
+                            </label>
+                        </div>
+    
+                        <div>
+                            <a routerLink="/login" class="txt1">
+                                ¿Ya tienes cuenta? / Ingresar
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="container-login100-form-btn m-t-17">
+                        <button class="login100-form-btn" type="submit">
+                            Crear cuenta
+                        </button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
